@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
 	return "Use the following API /insta-stealer/<user>"
 
-@app.route('/insta-stealer/<user>')
+@app.route('/<user>')
 def stealPhoto(user):
 	try:
 		url = "https://instagram.com/"+user
