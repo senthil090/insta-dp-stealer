@@ -23,6 +23,7 @@ def stealPhoto(user):
 		for data in tag:
 			if data.getText().find("window._sharedData") != -1:
 				instaDetails = scrap_dp_link(data.getText())
+				instaDetails.replace("https://mcontent-iad3-1.cdninstagram.com/","https://instagram.fmaa2-1.fna.fbcdn.net/")
 				return redirect(instaDetails.replace("/s","/m"),code=302)
 
 	return user
