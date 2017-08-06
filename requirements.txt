@@ -6,16 +6,11 @@ Cython==0.26
 pyOpenSSL==17.2.0
 backports.functools_lru_cache==1.4
 beautifulsoup4==4.6.0
-com==1.0.0
-ed25519ll==0.6
 protobuf==3.3.0
 ipaddr==2.1.11
-java==0.0.1
 jsonschema==2.6.0
 keyring==10.4.0
 ndg_httpsclient==0.4.2
-nt==0.0.0
-org==1.0.0
 pytest==3.2.0
 redis==2.10.5
 wincertstore==0.2
