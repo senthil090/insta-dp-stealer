@@ -40,4 +40,4 @@ def scrap_dp_link(text):
 	return dpDataLink
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
