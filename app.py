@@ -13,9 +13,7 @@ def index():
 def stealPhoto(user):
 	try:
 		url = "https://instagram.com/"+user
-		print url
 		page = requests.get(url)
-		print page
 	except:
 		return "Not Found"
 
@@ -32,7 +30,6 @@ def stealPhoto(user):
 
 def scrap_dp_link(text):
 	string_length = text.find("=")
-	print string_length
 	textData = text[string_length+1:len(text)-1]
 	textJson = json.loads(textData)
 	dpData = textJson["entry_data"]["ProfilePage"][0];
