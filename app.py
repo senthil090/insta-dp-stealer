@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return "Hello Flask"
+	return "Use the following API /insta-stealer/<user>"
 
 @app.route('/insta-stealer/<user>')
 def stealPhoto(user):
