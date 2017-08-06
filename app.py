@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return "Use the following API /insta-stealer/<user>"
+	return "Use the following API /userName (example):: https://insta-stealer.herokuapp.com/senthilkumar_s_"
 
 @app.route('/<user>')
 def stealPhoto(user):
