@@ -4,3 +4,5 @@ requests==2.18.1
 bs4==0.0.1
 gunicorn==19.0.0
 gevent
+flask_cors
+flask_json
