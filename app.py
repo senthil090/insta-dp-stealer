@@ -1,13 +1,17 @@
 import requests
-from flask import Flask, render_template,redirect
+from flask import Flask, render_template,redirect,jsonify
 from bs4 import BeautifulSoup
 import json
+from flask_cors import CORS
+from flask_json import FlaskJSON,json_response
 
 app = Flask(__name__)
+CORS(app)
+FlaskJSON(app)
 
 @app.route('/')
 def index():
-	return "Use the following API /userName (example):: https://insta-stealer.herokuapp.com/senthilkumar_s_"
+	return render_template('/index.html')
 
 @app.route('/<user>')
 def stealPhoto(user):
@@ -23,8 +27,8 @@ def stealPhoto(user):
 		for data in tag:
 			if data.getText().find("window._sharedData") != -1:
 				instaDetails = scrap_dp_link(data.getText()).replace("https://scontent-iad3-1.cdninstagram.com/","https://instagram.fmaa2-1.fna.fbcdn.net/");
-				##return instaDetails;
-				return redirect(instaDetails.replace("/s","/m"),code=302)
+				return json_response(insta_url = instaDetails.replace("/s","/m"),user = user);
+				##return redirect(instaDetails.replace("/s","/m"),code=302)
 
 	return user
 
